@@ -9,7 +9,13 @@ env:
   COMMIT_REF: ${{ github.sha }}
   COMMIT_MSG: ${{ github.event.head_commit.message }}
 jobs:
-  kbc-validate:
+  kbc_push:
+    # Skip automatic pull commits
+    if: "!contains(COMMIT_MSG, 'Automatic pull')"
+    # Stop all other jobs on the same branch, eg. automatic pull
+    concurrency:
+     group: ${{ github.head_ref }}
+     cancel-in-progress: true
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
