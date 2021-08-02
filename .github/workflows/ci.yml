@@ -17,3 +17,5 @@ jobs:
         uses: ./.github/actions/install
       - name: Validate repository state
         run: kbc validate
+      - name: Push dry run
+        run: kbc push --dry-run

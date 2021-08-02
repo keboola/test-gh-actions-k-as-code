@@ -7,8 +7,9 @@ env:
 jobs:
   kbc_pull:
     # Automatic pull can be canceled by push
-    concurrency: 
-     group: ${{ github.head_ref }}
+    concurrency:
+     group: main_branch
+     cancel-in-progress: false
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
