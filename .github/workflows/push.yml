@@ -11,7 +11,7 @@ env:
 jobs:
   kbc_push:
     # Skip automatic pull commits
-    if: "${{ ! contains($COMMIT_MSG, 'Automatic pull') }}"
+    if: "${{ ! contains(env.COMMIT_MSG, 'Automatic pull') }}"
     # Stop all other jobs on the same branch, eg. automatic pull
     concurrency:
      group: ${{ github.head_ref }}
