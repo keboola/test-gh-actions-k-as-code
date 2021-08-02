@@ -1,0 +1,45 @@
+{
+  "parameters": {
+    "tableId": "out.c-BDM.bdm_billing_type",
+    "dbName": "billing_type",
+    "incremental": false,
+    "primaryKey": [
+      "BILLING_TYPE_ID"
+    ],
+    "items": [
+      {
+        "name": "BILLING_TYPE_ID",
+        "dbName": "BILLING_TYPE_ID",
+        "type": "varchar",
+        "nullable": true,
+        "default": "",
+        "size": "16777216"
+      },
+      {
+        "name": "NAME",
+        "dbName": "NAME",
+        "type": "varchar",
+        "nullable": true,
+        "default": "",
+        "size": "16777216"
+      }
+    ]
+  },
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "source_search": {
+            "key": "bdm.scaffold.table.tag",
+            "value": "ShoptetEcommerce.internal.outBdmBillingType"
+          },
+          "destination": "out.c-BDM.bdm_billing_type.csv",
+          "columns": [
+            "BILLING_TYPE_ID",
+            "NAME"
+          ]
+        }
+      ]
+    }
+  }
+}

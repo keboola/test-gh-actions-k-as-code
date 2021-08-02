@@ -1,0 +1,91 @@
+{
+  "parameters": {
+    "base_url": "https://www.lihovarek.cz",
+    "additional_data": [],
+    "customers_url": "https://www.lihovarek.cz/export/customers.csv?hash=c2479ab708f473266eb35bf2b4b31f8d391cd97ffa4f0dae757896da73c1d604",
+    "stock_url": "https://www.lihovarek.cz/export/stockStatistics.csv?hash=ecd72d6c68bfe096f6a074ac66c4555897f03288c40fcd17387f57687088fe99",
+    "delimiter": ";",
+    "src_charset": "windows-1250",
+    "products_url": "https://www.lihovarek.cz/export/products.csv?patternId=27\u0026hash=1c4be4f2e49f1b7755cb153e523936387322c9e7a62c39557e3e98ea9e400f55",
+    "shop_name": "Lihovárek",
+    "orders_url": "https://www.lihovarek.cz/export/orders.csv?patternId=90\u0026hash=028a91769684cd9b0ce9c005dd043268ee495524adf1a03c474e5a9ec6f75d3a"
+  },
+  "processors": {
+    "after": [
+      {
+        "definition": {
+          "component": "keboola.processor-add-metadata"
+        },
+        "parameters": {
+          "tables": [
+            {
+              "table": "orders.csv",
+              "metadata": [
+                {
+                  "key": "bdm.scaffold.table.tag",
+                  "value": "ShoptetEcommerce.internal.inKdsTeamExShoptetPermalinkOrders"
+                },
+                {
+                  "key": "scaffold.id",
+                  "value": "ShoptetEcommerce"
+                }
+              ]
+            },
+            {
+              "table": "products.csv",
+              "metadata": [
+                {
+                  "key": "bdm.scaffold.table.tag",
+                  "value": "ShoptetEcommerce.internal.inKdsTeamExShoptetPermalinkProducts"
+                },
+                {
+                  "key": "scaffold.id",
+                  "value": "ShoptetEcommerce"
+                }
+              ]
+            },
+            {
+              "table": "customers.csv",
+              "metadata": [
+                {
+                  "key": "bdm.scaffold.table.tag",
+                  "value": "ShoptetEcommerce.internal.inKdsTeamExShoptetPermalinkCustomers"
+                },
+                {
+                  "key": "scaffold.id",
+                  "value": "ShoptetEcommerce"
+                }
+              ]
+            },
+            {
+              "table": "stocks.csv",
+              "metadata": [
+                {
+                  "key": "bdm.scaffold.table.tag",
+                  "value": "ShoptetEcommerce.internal.inKdsTeamExShoptetPermalinkStocks"
+                },
+                {
+                  "key": "scaffold.id",
+                  "value": "ShoptetEcommerce"
+                }
+              ]
+            },
+            {
+              "table": "shoptet.csv",
+              "metadata": [
+                {
+                  "key": "bdm.scaffold.table.tag",
+                  "value": "ShoptetEcommerce.internal.inKdsTeamExShoptetPermalinkShoptet"
+                },
+                {
+                  "key": "scaffold.id",
+                  "value": "ShoptetEcommerce"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

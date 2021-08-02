@@ -1,0 +1,90 @@
+{
+  "parameters": {
+    "tableId": "out.c-BDM.BDM_MARKETING_CAMPAIGN_COSTS_MONTHLY",
+    "dbName": "marketing_campaign_cost_monthly",
+    "incremental": false,
+    "primaryKey": [
+      "MARKETING_CAMPAIGN_COSTS_ID"
+    ],
+    "items": [
+      {
+        "name": "MARKETING_CAMPAIGN_COSTS_ID",
+        "dbName": "MARKETING_CAMPAIGN_COSTS_ID",
+        "type": "varchar",
+        "nullable": true,
+        "default": "",
+        "size": "1000"
+      },
+      {
+        "name": "SOURCE",
+        "dbName": "SOURCE",
+        "type": "varchar",
+        "nullable": true,
+        "default": "",
+        "size": "1000"
+      },
+      {
+        "name": "DATE",
+        "dbName": "DATE",
+        "type": "date",
+        "nullable": true,
+        "default": "",
+        "size": ""
+      },
+      {
+        "name": "CAMPAIGN",
+        "dbName": "CAMPAIGN",
+        "type": "varchar",
+        "nullable": true,
+        "default": "",
+        "size": "16777216"
+      },
+      {
+        "name": "IMPRESSIONS",
+        "dbName": "IMPRESSIONS",
+        "type": "int",
+        "nullable": true,
+        "default": "",
+        "size": ""
+      },
+      {
+        "name": "CLICKS",
+        "dbName": "CLICKS",
+        "type": "int",
+        "nullable": true,
+        "default": "",
+        "size": ""
+      },
+      {
+        "name": "COST",
+        "dbName": "COST",
+        "type": "float",
+        "nullable": true,
+        "default": "",
+        "size": ""
+      }
+    ]
+  },
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "source_search": {
+            "key": "bdm.scaffold.table.tag",
+            "value": "ShoptetEcommerce.internal.outBdmMarketingCampaignCostsMonthly"
+          },
+          "destination": "out.c-BDM.BDM_MARKETING_CAMPAIGN_COSTS_MONTHLY.csv",
+          "columns": [
+            "MARKETING_CAMPAIGN_COSTS_ID",
+            "SOURCE",
+            "DATE",
+            "CAMPAIGN",
+            "IMPRESSIONS",
+            "CLICKS",
+            "COST"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,4 @@
+SELECT 
+   123;
+
+INSERT abc

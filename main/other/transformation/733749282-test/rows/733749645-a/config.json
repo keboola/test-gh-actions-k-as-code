@@ -1,0 +1,17 @@
+{
+  "output": [],
+  "queries": [
+    "-- This is a sample query.\n-- Adjust accordingly to your input mapping, output mapping\n-- and desired functionality.\n-- CREATE TABLE \"out_table\" AS SELECT * FROM \"in_table\";"
+  ],
+  "input": [],
+  "name": "a",
+  "packages": [],
+  "requires": [
+    "733749336"
+  ],
+  "backend": "snowflake",
+  "type": "simple",
+  "id": "733749645",
+  "phase": 1,
+  "disabled": false
+}

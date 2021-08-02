@@ -1,0 +1,205 @@
+{
+  "parameters": {},
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "destination": "contacts",
+          "where_column": "",
+          "where_values": [],
+          "where_operator": "eq",
+          "columns": [],
+          "source_search": {
+            "key": "bdm.scaffold.table.tag",
+            "value": "HubspotCrm.internal.inKdsTeamExHubspotCrmContacts"
+          }
+        },
+        {
+          "destination": "pipelines",
+          "where_column": "",
+          "where_values": [],
+          "where_operator": "eq",
+          "columns": [],
+          "source_search": {
+            "key": "bdm.scaffold.table.tag",
+            "value": "HubspotCrm.internal.inKdsTeamExHubspotCrmPipelines"
+          }
+        },
+        {
+          "destination": "pipeline_stages",
+          "where_column": "",
+          "where_values": [],
+          "where_operator": "eq",
+          "columns": [],
+          "source_search": {
+            "key": "bdm.scaffold.table.tag",
+            "value": "HubspotCrm.internal.inKdsTeamExHubspotCrmPipelineStages"
+          }
+        },
+        {
+          "destination": "deals_contacts_list",
+          "where_column": "",
+          "where_values": [],
+          "where_operator": "eq",
+          "columns": [],
+          "source_search": {
+            "key": "bdm.scaffold.table.tag",
+            "value": "HubspotCrm.internal.inKdsTeamExHubspotCrmDealsContactsList"
+          }
+        },
+        {
+          "destination": "companies",
+          "where_column": "",
+          "where_values": [],
+          "where_operator": "eq",
+          "columns": [],
+          "source_search": {
+            "key": "bdm.scaffold.table.tag",
+            "value": "HubspotCrm.internal.inKdsTeamExHubspotCrmCompanies"
+          }
+        },
+        {
+          "destination": "owners",
+          "where_column": "",
+          "where_values": [],
+          "where_operator": "eq",
+          "columns": [],
+          "source_search": {
+            "key": "bdm.scaffold.table.tag",
+            "value": "HubspotCrm.internal.inKdsTeamExHubspotCrmOwners"
+          }
+        },
+        {
+          "destination": "deals",
+          "where_column": "",
+          "where_values": [],
+          "where_operator": "eq",
+          "columns": [],
+          "source_search": {
+            "key": "bdm.scaffold.table.tag",
+            "value": "HubspotCrm.internal.inKdsTeamExHubspotCrmDeals"
+          }
+        },
+        {
+          "destination": "activities",
+          "where_column": "",
+          "where_values": [],
+          "where_operator": "eq",
+          "columns": [],
+          "source_search": {
+            "key": "bdm.scaffold.table.tag",
+            "value": "HubspotCrm.internal.inKdsTeamExHubspotCrmActivities"
+          }
+        },
+        {
+          "destination": "deals_assoc_companies_list",
+          "where_column": "",
+          "where_values": [],
+          "where_operator": "eq",
+          "columns": [],
+          "source_search": {
+            "key": "bdm.scaffold.table.tag",
+            "value": "HubspotCrm.internal.inKdsTeamExHubspotCrmDealsAssocCompaniesList"
+          }
+        }
+      ]
+    },
+    "output": {
+      "tables": [
+        {
+          "primary_key": [
+            "companyId"
+          ],
+          "destination": "out.c-HubspotCrm.hubspotCompanies",
+          "source": "out_companies",
+          "incremental": true,
+          "delete_where_column": "",
+          "delete_where_operator": "eq",
+          "delete_where_values": []
+        },
+        {
+          "destination": "out.c-HubspotCrm.hubspotContacts",
+          "source": "out_contacts",
+          "primary_key": [
+            "canonical_vid"
+          ],
+          "incremental": true,
+          "delete_where_column": "",
+          "delete_where_operator": "eq",
+          "delete_where_values": []
+        },
+        {
+          "destination": "out.c-HubspotCrm.hubspotOwners",
+          "source": "out_owners",
+          "primary_key": [
+            "ownerId"
+          ],
+          "incremental": true,
+          "delete_where_column": "",
+          "delete_where_operator": "eq",
+          "delete_where_values": []
+        },
+        {
+          "destination": "out.c-HubspotCrm.hubspotDeals",
+          "source": "out_deals",
+          "primary_key": [
+            "dealId"
+          ],
+          "incremental": true,
+          "delete_where_column": "",
+          "delete_where_operator": "eq",
+          "delete_where_values": []
+        },
+        {
+          "destination": "out.c-HubspotCrm.hubspotDealsCompanies",
+          "source": "out_deals_companies",
+          "primary_key": [
+            "dealId",
+            "associated_companyId"
+          ]
+        },
+        {
+          "destination": "out.c-HubspotCrm.hubspotPipelines",
+          "source": "out_pipelines",
+          "primary_key": [
+            "pipelineId"
+          ],
+          "incremental": true,
+          "delete_where_column": "",
+          "delete_where_operator": "eq",
+          "delete_where_values": []
+        },
+        {
+          "destination": "out.c-HubspotCrm.hubspotStages",
+          "source": "out_stages",
+          "primary_key": [
+            "stageId"
+          ],
+          "incremental": true,
+          "delete_where_column": "",
+          "delete_where_operator": "eq",
+          "delete_where_values": []
+        },
+        {
+          "destination": "out.c-HubspotCrm.hubspotDealsContactsList",
+          "source": "out_deals_contacts_list",
+          "primary_key": [
+            "dealId",
+            "contact_vid"
+          ]
+        },
+        {
+          "destination": "out.c-HubspotCrm.hubspotActivities",
+          "source": "out_activities",
+          "primary_key": [
+            "engagement_id"
+          ],
+          "incremental": true,
+          "delete_where_column": "",
+          "delete_where_operator": "eq",
+          "delete_where_values": []
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "parameters": {
+    "tableId": "out.c-BDM.shoptet",
+    "dbName": "shoptet",
+    "incremental": false,
+    "primaryKey": [],
+    "items": [
+      {
+        "name": "NAME",
+        "dbName": "NAME",
+        "type": "varchar",
+        "nullable": true,
+        "default": "",
+        "size": "16777216"
+      },
+      {
+        "name": "BASE_URL",
+        "dbName": "BASE_URL",
+        "type": "varchar",
+        "nullable": true,
+        "default": "",
+        "size": "16777216"
+      },
+      {
+        "name": "DOMAIN",
+        "dbName": "DOMAIN",
+        "type": "varchar",
+        "nullable": true,
+        "default": "",
+        "size": "16777216"
+      }
+    ]
+  },
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "source_search": {
+            "key": "bdm.scaffold.table.tag",
+            "value": "ShoptetEcommerce.internal.outBdmShoptet"
+          },
+          "destination": "out.c-BDM.shoptet.csv",
+          "columns": [
+            "NAME",
+            "BASE_URL",
+            "DOMAIN"
+          ]
+        }
+      ]
+    }
+  }
+}

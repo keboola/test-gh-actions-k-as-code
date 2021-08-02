@@ -1,0 +1,14 @@
+{
+  "parameters": {
+    "db": {
+      "host": "keboola.snowflakecomputing.com",
+      "database": "SAPI_7425",
+      "schema": "WORKSPACE_734333058",
+      "warehouse": "KEBOOLA_PROD",
+      "user": "SAPI_WORKSPACE_734333058",
+      "password": "dLhqJwfektR8rm4VCfe6ibDQNt2hH4wF",
+      "port": "443",
+      "driver": "snowflake"
+    }
+  }
+}

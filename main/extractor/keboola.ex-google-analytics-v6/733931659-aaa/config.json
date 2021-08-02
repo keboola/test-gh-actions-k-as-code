@@ -1,0 +1,20 @@
+{
+  "authorization": {
+    "oauth_api": {
+      "id": "733931659",
+      "version": 3
+    }
+  },
+  "parameters": {
+    "profiles": [
+      {
+        "id": "61216213",
+        "accountId": "32779798",
+        "webPropertyId": "UA-32779798-1",
+        "name": "kamienkaci",
+        "webPropertyName": "kamienkaci",
+        "accountName": "kamienkaci"
+      }
+    ]
+  }
+}

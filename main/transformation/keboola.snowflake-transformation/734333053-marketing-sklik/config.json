@@ -1,0 +1,129 @@
+{
+  "parameters": {},
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "destination": "sklik-campaigns",
+          "where_column": "",
+          "where_values": [],
+          "where_operator": "eq",
+          "columns": [],
+          "source_search": {
+            "key": "bdm.scaffold.table.tag",
+            "value": "ShoptetEcommerce.internal.inKeboolaExSklikSklikCampaigns"
+          }
+        },
+        {
+          "destination": "accounts",
+          "where_column": "",
+          "where_values": [],
+          "where_operator": "eq",
+          "columns": [],
+          "source_search": {
+            "key": "bdm.scaffold.table.tag",
+            "value": "ShoptetEcommerce.internal.inKeboolaExSklikAccounts"
+          }
+        },
+        {
+          "destination": "sklik-campaigns-stats",
+          "where_column": "",
+          "where_values": [],
+          "where_operator": "eq",
+          "columns": [],
+          "source_search": {
+            "key": "bdm.scaffold.table.tag",
+            "value": "ShoptetEcommerce.internal.inKeboolaExSklikSklikCampaignsStats"
+          }
+        },
+        {
+          "destination": "sklik-campaigns-monthly",
+          "where_column": "",
+          "where_values": [],
+          "where_operator": "eq",
+          "columns": [],
+          "source_search": {
+            "key": "bdm.scaffold.table.tag",
+            "value": "ShoptetEcommerce.internal.inKeboolaExSklikSklikCampaignsMonthly"
+          }
+        },
+        {
+          "destination": "sklik-campaigns-monthly-stats",
+          "where_column": "",
+          "where_values": [],
+          "where_operator": "eq",
+          "columns": [],
+          "source_search": {
+            "key": "bdm.scaffold.table.tag",
+            "value": "ShoptetEcommerce.internal.inKeboolaExSklikSklikCampaignsMonthlyStats"
+          }
+        }
+      ]
+    },
+    "output": {
+      "tables": [
+        {
+          "destination": "out.c-ShoptetEcommerce.bdmMarketingCampaignCosts",
+          "source": "bdm_marketing_campaign_costs",
+          "incremental": true,
+          "delete_where_column": "",
+          "delete_where_operator": "eq",
+          "delete_where_values": [],
+          "primary_key": [
+            "MARKETING_CAMPAIGN_COSTS_ID"
+          ]
+        },
+        {
+          "destination": "out.c-ShoptetEcommerce.bdmMarketingCampaignCostsMonthly",
+          "primary_key": [
+            "MARKETING_CAMPAIGN_COSTS_ID"
+          ],
+          "source": "bdm_marketing_campaign_costs_monthly",
+          "incremental": true,
+          "delete_where_column": "",
+          "delete_where_operator": "eq",
+          "delete_where_values": []
+        }
+      ]
+    }
+  },
+  "processors": {
+    "after": [
+      {
+        "definition": {
+          "component": "keboola.processor-add-metadata"
+        },
+        "parameters": {
+          "tables": [
+            {
+              "table": "bdm_marketing_campaign_costs",
+              "metadata": [
+                {
+                  "key": "bdm.scaffold.table.tag",
+                  "value": "ShoptetEcommerce.internal.outBdmMarketingCampaignCosts"
+                },
+                {
+                  "key": "scaffold.id",
+                  "value": "ShoptetEcommerce"
+                }
+              ]
+            },
+            {
+              "table": "bdm_marketing_campaign_costs_monthly",
+              "metadata": [
+                {
+                  "key": "bdm.scaffold.table.tag",
+                  "value": "ShoptetEcommerce.internal.outBdmMarketingCampaignCostsMonthly"
+                },
+                {
+                  "key": "scaffold.id",
+                  "value": "ShoptetEcommerce"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,399 @@
+{
+  "version": 1,
+  "project": {
+    "id": 7425,
+    "apiHost": "connection.keboola.com"
+  },
+  "sortBy": "id",
+  "naming": {
+    "branch": "{branch_id}-{branch_name}",
+    "config": "{component_type}/{component_id}/{config_id}-{config_name}",
+    "configRow": "rows/{config_row_id}-{config_row_name}"
+  },
+  "allowedBranches": [
+    "__all__"
+  ],
+  "branches": [
+    {
+      "id": 28053,
+      "path": "28053-test"
+    },
+    {
+      "id": 589,
+      "path": "main"
+    }
+  ],
+  "configurations": [
+    {
+      "branchId": 28053,
+      "componentId": "keboola.ex-db-hive",
+      "id": "716162971",
+      "path": "extractor/keboola.ex-db-hive/716162971-test",
+      "rows": []
+    },
+    {
+      "branchId": 28053,
+      "componentId": "keboola.ex-ftp",
+      "id": "714189746",
+      "path": "extractor/keboola.ex-ftp/714189746-test",
+      "rows": []
+    },
+    {
+      "branchId": 28053,
+      "componentId": "keboola.ex-google-analytics-v4",
+      "id": "727176778",
+      "path": "extractor/keboola.ex-google-analytics-v4/727176778-test",
+      "rows": []
+    },
+    {
+      "branchId": 28053,
+      "componentId": "keboola.python-transformation-v2",
+      "id": "729809457",
+      "path": "transformation/keboola.python-transformation-v2/729809457-test",
+      "rows": []
+    },
+    {
+      "branchId": 28053,
+      "componentId": "keboola.shared-code",
+      "id": "729809772",
+      "path": "other/keboola.shared-code/729809772-shared-codes",
+      "rows": [
+        {
+          "id": "729809776",
+          "path": "rows/729809776-test"
+        },
+        {
+          "id": "729821082",
+          "path": "rows/729821082-test-2"
+        }
+      ]
+    },
+    {
+      "branchId": 28053,
+      "componentId": "keboola.snowflake-transformation",
+      "id": "727201916",
+      "path": "transformation/keboola.snowflake-transformation/727201916-debug-duplicate-i-ds",
+      "rows": []
+    },
+    {
+      "branchId": 28053,
+      "componentId": "keboola.snowflake-transformation",
+      "id": "730167432",
+      "path": "transformation/keboola.snowflake-transformation/730167432-test-2",
+      "rows": []
+    },
+    {
+      "branchId": 28053,
+      "componentId": "keboola.variables",
+      "id": "729809555",
+      "path": "other/keboola.variables/729809555-variables-definition-for-keboola-python-transformation-v-2-729809457",
+      "rows": [
+        {
+          "id": "729809556",
+          "path": "rows/729809556-default-values"
+        }
+      ]
+    },
+    {
+      "branchId": 28053,
+      "componentId": "keboola.variables",
+      "id": "729809774",
+      "path": "other/keboola.variables/729809774-variables-definition-for-keboola-shared-code-729809772",
+      "rows": []
+    },
+    {
+      "branchId": 589,
+      "componentId": "esnerda.wr-mailkit",
+      "id": "731069749",
+      "path": "writer/esnerda.wr-mailkit/731069749-test",
+      "rows": []
+    },
+    {
+      "branchId": 589,
+      "componentId": "kds-team.ex-hubspot-crm",
+      "id": "734331489",
+      "path": "extractor/kds-team.ex-hubspot-crm/734331489-hubspot-crm",
+      "rows": []
+    },
+    {
+      "branchId": 589,
+      "componentId": "kds-team.ex-shoptet-permalink",
+      "id": "734333041",
+      "path": "extractor/kds-team.ex-shoptet-permalink/734333041-shoptet-permalink-scraper",
+      "rows": []
+    },
+    {
+      "branchId": 589,
+      "componentId": "keboola.ex-db-hive",
+      "id": "716162971",
+      "path": "extractor/keboola.ex-db-hive/716162971-test",
+      "rows": []
+    },
+    {
+      "branchId": 589,
+      "componentId": "keboola.ex-facebook-ads",
+      "id": "732104071",
+      "path": "extractor/keboola.ex-facebook-ads/732104071-test",
+      "rows": []
+    },
+    {
+      "branchId": 589,
+      "componentId": "keboola.ex-facebook-ads",
+      "id": "734333044",
+      "path": "extractor/keboola.ex-facebook-ads/734333044-facebook-ads",
+      "rows": []
+    },
+    {
+      "branchId": 589,
+      "componentId": "keboola.ex-ftp",
+      "id": "714189746",
+      "path": "extractor/keboola.ex-ftp/714189746-test",
+      "rows": []
+    },
+    {
+      "branchId": 589,
+      "componentId": "keboola.ex-google-adwords-reports-v201809",
+      "id": "734333045",
+      "path": "extractor/keboola.ex-google-adwords-reports-v201809/734333045-google-ads",
+      "rows": []
+    },
+    {
+      "branchId": 589,
+      "componentId": "keboola.ex-google-analytics-v4",
+      "id": "727176778",
+      "path": "extractor/keboola.ex-google-analytics-v4/727176778-test",
+      "rows": []
+    },
+    {
+      "branchId": 589,
+      "componentId": "keboola.ex-google-analytics-v4",
+      "id": "733556958",
+      "path": "extractor/keboola.ex-google-analytics-v4/733556958-test-2",
+      "rows": []
+    },
+    {
+      "branchId": 589,
+      "componentId": "keboola.ex-google-analytics-v6",
+      "id": "733557323",
+      "path": "extractor/keboola.ex-google-analytics-v6/733557323-test",
+      "rows": []
+    },
+    {
+      "branchId": 589,
+      "componentId": "keboola.ex-google-analytics-v6",
+      "id": "733931659",
+      "path": "extractor/keboola.ex-google-analytics-v6/733931659-aaa",
+      "rows": [
+        {
+          "id": "733931754",
+          "path": "rows/733931754-test"
+        }
+      ]
+    },
+    {
+      "branchId": 589,
+      "componentId": "keboola.ex-papertrail",
+      "id": "731067729",
+      "path": "extractor/keboola.ex-papertrail/731067729-test",
+      "rows": []
+    },
+    {
+      "branchId": 589,
+      "componentId": "keboola.ex-sklik",
+      "id": "734333046",
+      "path": "extractor/keboola.ex-sklik/734333046-sklik",
+      "rows": []
+    },
+    {
+      "branchId": 589,
+      "componentId": "keboola.python-transformation-v2",
+      "id": "729809457",
+      "path": "transformation/keboola.python-transformation-v2/729809457-test",
+      "rows": []
+    },
+    {
+      "branchId": 589,
+      "componentId": "keboola.shared-code",
+      "id": "729809772",
+      "path": "other/keboola.shared-code/729809772-shared-codes",
+      "rows": [
+        {
+          "id": "729809776",
+          "path": "rows/729809776-test"
+        },
+        {
+          "id": "729821082",
+          "path": "rows/729821082-test-2"
+        }
+      ]
+    },
+    {
+      "branchId": 589,
+      "componentId": "keboola.snowflake-transformation",
+      "id": "727201916",
+      "path": "transformation/keboola.snowflake-transformation/727201916-debug-duplicate-i-ds",
+      "rows": []
+    },
+    {
+      "branchId": 589,
+      "componentId": "keboola.snowflake-transformation",
+      "id": "730167432",
+      "path": "transformation/keboola.snowflake-transformation/730167432-test-2",
+      "rows": []
+    },
+    {
+      "branchId": 589,
+      "componentId": "keboola.snowflake-transformation",
+      "id": "731475190",
+      "path": "transformation/keboola.snowflake-transformation/731475190-debug-call-system-wait-5-minutes",
+      "rows": []
+    },
+    {
+      "branchId": 589,
+      "componentId": "keboola.snowflake-transformation",
+      "id": "734331493",
+      "path": "transformation/keboola.snowflake-transformation/734331493-hubspot-crm-01-input-tables-creation",
+      "rows": []
+    },
+    {
+      "branchId": 589,
+      "componentId": "keboola.snowflake-transformation",
+      "id": "734331496",
+      "path": "transformation/keboola.snowflake-transformation/734331496-hubspot-crm-02-main",
+      "rows": []
+    },
+    {
+      "branchId": 589,
+      "componentId": "keboola.snowflake-transformation",
+      "id": "734333047",
+      "path": "transformation/keboola.snowflake-transformation/734333047-marketing-facebook-ads",
+      "rows": []
+    },
+    {
+      "branchId": 589,
+      "componentId": "keboola.snowflake-transformation",
+      "id": "734333052",
+      "path": "transformation/keboola.snowflake-transformation/734333052-marketing-google-ads",
+      "rows": []
+    },
+    {
+      "branchId": 589,
+      "componentId": "keboola.snowflake-transformation",
+      "id": "734333053",
+      "path": "transformation/keboola.snowflake-transformation/734333053-marketing-sklik",
+      "rows": []
+    },
+    {
+      "branchId": 589,
+      "componentId": "keboola.snowflake-transformation",
+      "id": "734333054",
+      "path": "transformation/keboola.snowflake-transformation/734333054-shoptet",
+      "rows": []
+    },
+    {
+      "branchId": 589,
+      "componentId": "keboola.snowflake-transformation",
+      "id": "734333056",
+      "path": "transformation/keboola.snowflake-transformation/734333056-shoptet-rfm",
+      "rows": []
+    },
+    {
+      "branchId": 589,
+      "componentId": "keboola.variables",
+      "id": "729809555",
+      "path": "other/keboola.variables/729809555-variables-definition-for-keboola-python-transformation-v-2-729809457",
+      "rows": [
+        {
+          "id": "729809556",
+          "path": "rows/729809556-default-values"
+        }
+      ]
+    },
+    {
+      "branchId": 589,
+      "componentId": "keboola.variables",
+      "id": "729809774",
+      "path": "other/keboola.variables/729809774-variables-definition-for-keboola-shared-code-729809772",
+      "rows": []
+    },
+    {
+      "branchId": 589,
+      "componentId": "keboola.wr-snowflake-blob-storage",
+      "id": "734333057",
+      "path": "writer/keboola.wr-snowflake-blob-storage/734333057-power-bi-workspace-upload",
+      "rows": [
+        {
+          "id": "734333061",
+          "path": "rows/734333061-bdm-marketing-campaign-costs"
+        },
+        {
+          "id": "734333063",
+          "path": "rows/734333063-bdm-marketing-campaign-costs-monthly"
+        },
+        {
+          "id": "734333064",
+          "path": "rows/734333064-bdm-order-lines"
+        },
+        {
+          "id": "734333065",
+          "path": "rows/734333065-bdm-orders"
+        },
+        {
+          "id": "734333066",
+          "path": "rows/734333066-bdm-billing-type"
+        },
+        {
+          "id": "734333067",
+          "path": "rows/734333067-bdm-shipping-type"
+        },
+        {
+          "id": "734333068",
+          "path": "rows/734333068-bdm-products"
+        },
+        {
+          "id": "734333069",
+          "path": "rows/734333069-bdm-customers"
+        },
+        {
+          "id": "734333070",
+          "path": "rows/734333070-analyze-clv-by-order-count"
+        },
+        {
+          "id": "734333071",
+          "path": "rows/734333071-analyze-clv-by-time-from-previous-order"
+        },
+        {
+          "id": "734333072",
+          "path": "rows/734333072-shoptet"
+        }
+      ]
+    },
+    {
+      "branchId": 589,
+      "componentId": "orchestrator",
+      "id": "734333082",
+      "path": "other/orchestrator/734333082-shoptet-ecommerce",
+      "rows": []
+    },
+    {
+      "branchId": 589,
+      "componentId": "transformation",
+      "id": "733749282",
+      "path": "other/transformation/733749282-test",
+      "rows": [
+        {
+          "id": "733749336",
+          "path": "rows/733749336-x"
+        },
+        {
+          "id": "733749375",
+          "path": "rows/733749375-y"
+        },
+        {
+          "id": "733749645",
+          "path": "rows/733749645-a"
+        }
+      ]
+    }
+  ]
+}

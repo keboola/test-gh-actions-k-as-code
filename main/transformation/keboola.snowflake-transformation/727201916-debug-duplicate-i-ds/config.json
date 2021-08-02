@@ -1,0 +1,25 @@
+{
+  "parameters": {},
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "source": "out.c-test-123.currency",
+          "destination": "input",
+          "where_column": "",
+          "where_values": [],
+          "where_operator": "eq",
+          "columns": []
+        }
+      ]
+    },
+    "output": {
+      "tables": [
+        {
+          "destination": "out.c-debug-duplicate-ids.output",
+          "source": "output"
+        }
+      ]
+    }
+  }
+}

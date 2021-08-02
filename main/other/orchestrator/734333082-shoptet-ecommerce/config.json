@@ -1,0 +1,144 @@
+{
+  "crontabRecord": null,
+  "crontabTimezone": null,
+  "token": {
+    "id": "378928",
+    "description": "Orchestrator Shoptet Ecommerce"
+  },
+  "active": true,
+  "tasks": [
+    {
+      "id": 734333083,
+      "component": "keboola.ex-facebook-ads",
+      "componentUrl": null,
+      "action": "run",
+      "actionParameters": {
+        "config": "734333044"
+      },
+      "timeoutMinutes": null,
+      "active": true,
+      "continueOnFailure": false,
+      "phase": "Pull data"
+    },
+    {
+      "id": 734333085,
+      "component": "keboola.ex-google-adwords-reports-v201809",
+      "componentUrl": null,
+      "action": "run",
+      "actionParameters": {
+        "config": "734333045"
+      },
+      "timeoutMinutes": null,
+      "active": true,
+      "continueOnFailure": false,
+      "phase": "Pull data"
+    },
+    {
+      "id": 734333086,
+      "component": "keboola.ex-sklik",
+      "componentUrl": null,
+      "action": "run",
+      "actionParameters": {
+        "config": "734333046"
+      },
+      "timeoutMinutes": null,
+      "active": true,
+      "continueOnFailure": false,
+      "phase": "Pull data"
+    },
+    {
+      "id": 734333087,
+      "component": "kds-team.ex-shoptet-permalink",
+      "componentUrl": null,
+      "action": "run",
+      "actionParameters": {
+        "config": "734333041"
+      },
+      "timeoutMinutes": null,
+      "active": true,
+      "continueOnFailure": false,
+      "phase": "Pull data"
+    },
+    {
+      "id": 734333088,
+      "component": "keboola.snowflake-transformation",
+      "componentUrl": null,
+      "action": "run",
+      "actionParameters": {
+        "config": "734333047"
+      },
+      "timeoutMinutes": null,
+      "active": true,
+      "continueOnFailure": false,
+      "phase": "Create BDM"
+    },
+    {
+      "id": 734333089,
+      "component": "keboola.snowflake-transformation",
+      "componentUrl": null,
+      "action": "run",
+      "actionParameters": {
+        "config": "734333052"
+      },
+      "timeoutMinutes": null,
+      "active": true,
+      "continueOnFailure": false,
+      "phase": "Create BDM"
+    },
+    {
+      "id": 734333090,
+      "component": "keboola.snowflake-transformation",
+      "componentUrl": null,
+      "action": "run",
+      "actionParameters": {
+        "config": "734333053"
+      },
+      "timeoutMinutes": null,
+      "active": true,
+      "continueOnFailure": false,
+      "phase": "Create BDM"
+    },
+    {
+      "id": 734333091,
+      "component": "keboola.snowflake-transformation",
+      "componentUrl": null,
+      "action": "run",
+      "actionParameters": {
+        "config": "734333054"
+      },
+      "timeoutMinutes": null,
+      "active": true,
+      "continueOnFailure": false,
+      "phase": "Create BDM"
+    },
+    {
+      "id": 734333092,
+      "component": "keboola.snowflake-transformation",
+      "componentUrl": null,
+      "action": "run",
+      "actionParameters": {
+        "config": "734333056"
+      },
+      "timeoutMinutes": null,
+      "active": true,
+      "continueOnFailure": false,
+      "phase": "RFM Segmentation"
+    },
+    {
+      "id": 734333094,
+      "component": "keboola.wr-snowflake-blob-storage",
+      "componentUrl": null,
+      "action": "run",
+      "actionParameters": {
+        "config": "734333057"
+      },
+      "timeoutMinutes": null,
+      "active": true,
+      "continueOnFailure": false,
+      "phase": "Act On Data"
+    }
+  ],
+  "notifications": [],
+  "variableValuesId": null,
+  "variableValuesData": null
+}

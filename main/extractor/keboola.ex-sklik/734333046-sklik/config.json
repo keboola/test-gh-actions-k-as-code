@@ -1,0 +1,102 @@
+{
+  "parameters": {
+    "#token": "KBC::ProjectSecure::eJwBigF1/mE6Mjp7aTowO3M6MTc4OiLe9QIA3MLKoprruDLQApiiEWnQH2Bnss46Q7ByDahfOZY7qBMj8wsiQ8P95RaOksg4RoMkUrGAiWXQSxQN3RE/8VfWqQisIzAAY2A4w+JjJGUC2Z9wVYX8v30mfy8OGOBP3wnkNYQY+79ZyS6XceONMkl5EGBKR5UVWCmbQkBbpU1k/9NbraUIe2NGEykR9zkwqX9VmOuvtaoYcF2PLhV2GfX39twsPl6mJ4M/fCP2tWUkIjtpOjE7czoxODQ6IgECAwB4ZV7Pb+ceXfpJSJC/W88mh+as71hybdnxlvXMw4VnbcABHawK+7NWOBLeaxB+lh/obAAAAH4wfAYJKoZIhvcNAQcGoG8wbQIBADBoBgkqhkiG9w0BBwEwHgYJYIZIAWUDBAEuMBEEDIenT4+JyY8JF2qOLgIBEIA7YWUsP3bQtmLw/lay7CqKV3GNYJCKLfEu7LtJYdImm3JVms5Wwe828pO22dft/X5FVuTQ70TRbYfjzTAiO32IbaZl",
+    "reports": [
+      {
+        "name": "sklik-campaigns",
+        "resource": "campaigns",
+        "displayColumns": "id, name, clicks, impressions, totalMoney, createDate, budget.name, budget.name, startDate",
+        "displayOptions": "{ \"statGranularity\": \"daily\" }",
+        "restrictionFilter": "{ \"dateFrom\": \"2020-01-01\" }"
+      },
+      {
+        "name": "sklik-campaigns-monthly",
+        "resource": "campaigns",
+        "displayColumns": "id, name, clicks, impressions, totalMoney, createDate, budget.name, budget.name, startDate",
+        "displayOptions": "{ \"statGranularity\": \"monthly\" }",
+        "restrictionFilter": "{ \"dateFrom\": \"2018-01-01\" }"
+      }
+    ],
+    "accounts": "",
+    "username": "",
+    "#password": "KBC::ProjectSecure::eJxLtDKyqs60MrAutrIwsVK695WJYeHipGmnbLRUH3z25Jv9yzHKPftCw7lzc16cq8tSkg0w/MC67p7Vp8/PskIkUpvX3W5ii0985N2QbrPbJ7Q0KiGm6uSJ9c2Zyz893nLHwsdlW1Kjp5J1ppUh0HxDkAWMTMwMFalx5/Ofy8X+8vSYsD/6vFr7szXvI4pyb36c9vXM4db03AOMHQd8j/5bfPbJmmsqjobzF7QyMDDUGdSwcWq1ebR952VkZ1uQb5DLxMhgkIEQYzSQY+NMaPNgTGVmYdQzEGThYSrddt3rD+vpLWue6zExCjRYV583DAwLSzj4a/tRrwqxwt89zNMd5zz6Iz4ndeGnrU+5bq16EsCxhmPFvFqfxbe60w4m5h8xmbUnaVr6E5krSta1AEpZgcc="
+  },
+  "processors": {
+    "after": [
+      {
+        "definition": {
+          "component": "keboola.processor-add-metadata"
+        },
+        "parameters": {
+          "tables": [
+            {
+              "table": "accounts.csv",
+              "metadata": [
+                {
+                  "key": "bdm.scaffold.table.tag",
+                  "value": "ShoptetEcommerce.internal.inKeboolaExSklikAccounts"
+                },
+                {
+                  "key": "scaffold.id",
+                  "value": "ShoptetEcommerce"
+                }
+              ]
+            },
+            {
+              "table": "sklik-campaigns.csv",
+              "metadata": [
+                {
+                  "key": "bdm.scaffold.table.tag",
+                  "value": "ShoptetEcommerce.internal.inKeboolaExSklikSklikCampaigns"
+                },
+                {
+                  "key": "scaffold.id",
+                  "value": "ShoptetEcommerce"
+                }
+              ]
+            },
+            {
+              "table": "sklik-campaigns-stats.csv",
+              "metadata": [
+                {
+                  "key": "bdm.scaffold.table.tag",
+                  "value": "ShoptetEcommerce.internal.inKeboolaExSklikSklikCampaignsStats"
+                },
+                {
+                  "key": "scaffold.id",
+                  "value": "ShoptetEcommerce"
+                }
+              ]
+            },
+            {
+              "table": "sklik-campaigns-monthly.csv",
+              "metadata": [
+                {
+                  "key": "bdm.scaffold.table.tag",
+                  "value": "ShoptetEcommerce.internal.inKeboolaExSklikSklikCampaignsMonthly"
+                },
+                {
+                  "key": "scaffold.id",
+                  "value": "ShoptetEcommerce"
+                }
+              ]
+            },
+            {
+              "table": "sklik-campaigns-monthly-stats.csv",
+              "metadata": [
+                {
+                  "key": "bdm.scaffold.table.tag",
+                  "value": "ShoptetEcommerce.internal.inKeboolaExSklikSklikCampaignsMonthlyStats"
+                },
+                {
+                  "key": "scaffold.id",
+                  "value": "ShoptetEcommerce"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

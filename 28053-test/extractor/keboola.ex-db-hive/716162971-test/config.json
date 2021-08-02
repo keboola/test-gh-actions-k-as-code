@@ -1,0 +1,14 @@
+{
+  "parameters": {
+    "db": {
+      "port": 10000,
+      "ssh": {
+        "sshPort": 22
+      },
+      "host": "abc",
+      "user": "def",
+      "#password": "KBC::ProjectSecure::eJwBLgHR/mE6Mjp7aTowO3M6ODc6It71AgBZspJ2zPMGa9B4dV1UexQRhaW1EyoRmsOTVhbCNVmoy9ka5Oz/XTx6JB/PQhmkGz09bk6h4rtBwGPlQS+Ls65AGrUqFk60aXPcdfkquKJ/BeDlHyI7aToxO3M6MTg0OiIBAgMAeGVez2/nHl36SUiQv1vPJofmrO9Ycm3Z8Zb1zMOFZ23AARZpZJ2op3Unr9xvaykfXPoAAAB+MHwGCSqGSIb3DQEHBqBvMG0CAQAwaAYJKoZIhvcNAQcBMB4GCWCGSAFlAwQBLjARBAzKq4uporIzwN184OACARCAOxGTSoeHpow6TJWY6MudPmqjKgMKf42jb+sf+w6z7NEgw+9I/+rBGJOiPN1XL3pKu2rPXweM0QRZ7sGRIjt9mHN9rw==",
+      "database": "aaa"
+    }
+  }
+}

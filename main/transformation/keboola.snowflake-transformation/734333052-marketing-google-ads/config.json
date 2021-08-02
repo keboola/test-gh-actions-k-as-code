@@ -1,0 +1,85 @@
+{
+  "parameters": {},
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "destination": "CAMPAIGN_PERFORMANCE_REPORT",
+          "where_column": "",
+          "where_values": [],
+          "where_operator": "eq",
+          "columns": [],
+          "source_search": {
+            "key": "bdm.scaffold.table.tag",
+            "value": "ShoptetEcommerce.internal.inKeboolaExAdwordsV201809CampaignPerformanceReport"
+          }
+        }
+      ]
+    },
+    "output": {
+      "tables": [
+        {
+          "destination": "out.c-ShoptetEcommerce.bdmMarketingCampaignCosts",
+          "source": "bdm_marketing_campaign_costs",
+          "primary_key": [
+            "MARKETING_CAMPAIGN_COSTS_ID"
+          ],
+          "incremental": true,
+          "delete_where_column": "",
+          "delete_where_operator": "eq",
+          "delete_where_values": []
+        },
+        {
+          "destination": "out.c-ShoptetEcommerce.bdmMarketingCampaignCostsMonthly",
+          "source": "bdm_marketing_campaign_costs_monthly",
+          "primary_key": [
+            "MARKETING_CAMPAIGN_COSTS_ID"
+          ],
+          "incremental": true,
+          "delete_where_column": "",
+          "delete_where_operator": "eq",
+          "delete_where_values": []
+        }
+      ]
+    }
+  },
+  "processors": {
+    "after": [
+      {
+        "definition": {
+          "component": "keboola.processor-add-metadata"
+        },
+        "parameters": {
+          "tables": [
+            {
+              "table": "bdm_marketing_campaign_costs",
+              "metadata": [
+                {
+                  "key": "bdm.scaffold.table.tag",
+                  "value": "ShoptetEcommerce.internal.outBdmMarketingCampaignCosts"
+                },
+                {
+                  "key": "scaffold.id",
+                  "value": "ShoptetEcommerce"
+                }
+              ]
+            },
+            {
+              "table": "bdm_marketing_campaign_costs_monthly",
+              "metadata": [
+                {
+                  "key": "bdm.scaffold.table.tag",
+                  "value": "ShoptetEcommerce.internal.outBdmMarketingCampaignCostsMonthly"
+                },
+                {
+                  "key": "scaffold.id",
+                  "value": "ShoptetEcommerce"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

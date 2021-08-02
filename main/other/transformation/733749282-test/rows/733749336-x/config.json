@@ -1,0 +1,7 @@
+{
+  "backend": "snowflake",
+  "type": "simple",
+  "queries": [
+    "-- This is a sample query.\n-- Adjust accordingly to your input mapping, output mapping\n-- and desired functionality.\n-- CREATE TABLE \"out_table\" AS SELECT * FROM \"in_table\";"
+  ]
+}

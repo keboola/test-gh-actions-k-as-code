@@ -1,0 +1,263 @@
+{
+  "parameters": {},
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "destination": "pipelines",
+          "where_column": "",
+          "where_values": [],
+          "where_operator": "eq",
+          "columns": [],
+          "source": "out.c-HubspotCrm.hubspotPipelines"
+        },
+        {
+          "destination": "deals_contacts_list",
+          "where_column": "",
+          "where_values": [],
+          "where_operator": "eq",
+          "columns": [],
+          "source": "out.c-HubspotCrm.hubspotDealsContactsList"
+        },
+        {
+          "destination": "owners",
+          "where_column": "",
+          "where_values": [],
+          "where_operator": "eq",
+          "columns": [],
+          "source": "out.c-HubspotCrm.hubspotOwners"
+        },
+        {
+          "destination": "companies",
+          "where_column": "",
+          "where_values": [],
+          "where_operator": "eq",
+          "columns": [],
+          "source": "out.c-HubspotCrm.hubspotCompanies"
+        },
+        {
+          "destination": "activities",
+          "where_column": "",
+          "where_values": [],
+          "where_operator": "eq",
+          "columns": [],
+          "source": "out.c-HubspotCrm.hubspotActivities"
+        },
+        {
+          "destination": "deals_companies",
+          "where_column": "",
+          "where_values": [],
+          "where_operator": "eq",
+          "columns": [],
+          "source": "out.c-HubspotCrm.hubspotDealsCompanies"
+        },
+        {
+          "destination": "contacts",
+          "where_column": "",
+          "where_values": [],
+          "where_operator": "eq",
+          "columns": [],
+          "source": "out.c-HubspotCrm.hubspotContacts"
+        },
+        {
+          "destination": "deals",
+          "where_column": "",
+          "where_values": [],
+          "where_operator": "eq",
+          "columns": [],
+          "source": "out.c-HubspotCrm.hubspotDeals"
+        },
+        {
+          "destination": "stages",
+          "where_column": "",
+          "where_values": [],
+          "where_operator": "eq",
+          "columns": [],
+          "source": "out.c-HubspotCrm.hubspotStages"
+        }
+      ]
+    },
+    "output": {
+      "tables": [
+        {
+          "destination": "out.c-HubspotCrm.crmCompany",
+          "source": "out_company",
+          "primary_key": [
+            "company_id"
+          ],
+          "incremental": true,
+          "delete_where_column": "",
+          "delete_where_operator": "eq",
+          "delete_where_values": []
+        },
+        {
+          "destination": "out.c-HubspotCrm.crmContact",
+          "source": "out_contact",
+          "primary_key": [
+            "contact_id"
+          ],
+          "incremental": true,
+          "delete_where_column": "",
+          "delete_where_operator": "eq",
+          "delete_where_values": []
+        },
+        {
+          "destination": "out.c-HubspotCrm.crmEmployee",
+          "source": "out_employee",
+          "primary_key": [
+            "employee_id"
+          ],
+          "incremental": true,
+          "delete_where_column": "",
+          "delete_where_operator": "eq",
+          "delete_where_values": []
+        },
+        {
+          "destination": "out.c-HubspotCrm.crmOpportunity",
+          "source": "out_opportunity",
+          "primary_key": [
+            "opportunity_id"
+          ],
+          "incremental": true,
+          "delete_where_column": "",
+          "delete_where_operator": "eq",
+          "delete_where_values": []
+        },
+        {
+          "destination": "out.c-HubspotCrm.crmAuxiliaryTablesOpportunitySnapshot",
+          "source": "out_opportunity_snapshot",
+          "primary_key": [
+            "opportunity_id",
+            "snapshot_date"
+          ],
+          "incremental": true,
+          "delete_where_column": "",
+          "delete_where_operator": "eq",
+          "delete_where_values": []
+        },
+        {
+          "destination": "out.c-HubspotCrm.crmActivity",
+          "source": "out_activity",
+          "primary_key": [
+            "activity_id"
+          ],
+          "incremental": true,
+          "delete_where_column": "",
+          "delete_where_operator": "eq",
+          "delete_where_values": []
+        },
+        {
+          "destination": "out.c-HubspotCrm.crmOpportunityContact",
+          "source": "out_opportunity_contact",
+          "primary_key": [
+            "opportunity_contact_id"
+          ]
+        }
+      ]
+    }
+  },
+  "processors": {
+    "after": [
+      {
+        "definition": {
+          "component": "keboola.processor-add-metadata"
+        },
+        "parameters": {
+          "tables": [
+            {
+              "table": "out_company",
+              "metadata": [
+                {
+                  "key": "bdm.scaffold.table.tag",
+                  "value": "bdm.Crm.Company"
+                },
+                {
+                  "key": "scaffold.id",
+                  "value": "HubspotCrm"
+                }
+              ]
+            },
+            {
+              "table": "out_contact",
+              "metadata": [
+                {
+                  "key": "bdm.scaffold.table.tag",
+                  "value": "bdm.Crm.Contact"
+                },
+                {
+                  "key": "scaffold.id",
+                  "value": "HubspotCrm"
+                }
+              ]
+            },
+            {
+              "table": "out_employee",
+              "metadata": [
+                {
+                  "key": "bdm.scaffold.table.tag",
+                  "value": "bdm.Crm.Employee"
+                },
+                {
+                  "key": "scaffold.id",
+                  "value": "HubspotCrm"
+                }
+              ]
+            },
+            {
+              "table": "out_opportunity",
+              "metadata": [
+                {
+                  "key": "bdm.scaffold.table.tag",
+                  "value": "bdm.Crm.Opportunity"
+                },
+                {
+                  "key": "scaffold.id",
+                  "value": "HubspotCrm"
+                }
+              ]
+            },
+            {
+              "table": "out_opportunity_snapshot",
+              "metadata": [
+                {
+                  "key": "bdm.scaffold.table.tag",
+                  "value": "HubspotCrm.internal.outCrmAuxiliaryTablesOpportunitySnapshot"
+                },
+                {
+                  "key": "scaffold.id",
+                  "value": "HubspotCrm"
+                }
+              ]
+            },
+            {
+              "table": "out_activity",
+              "metadata": [
+                {
+                  "key": "bdm.scaffold.table.tag",
+                  "value": "bdm.Crm.Activity"
+                },
+                {
+                  "key": "scaffold.id",
+                  "value": "HubspotCrm"
+                }
+              ]
+            },
+            {
+              "table": "out_opportunity_contact",
+              "metadata": [
+                {
+                  "key": "bdm.scaffold.table.tag",
+                  "value": "bdm.Crm.OpportunityContact"
+                },
+                {
+                  "key": "scaffold.id",
+                  "value": "HubspotCrm"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
