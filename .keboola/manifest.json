@@ -33,13 +33,6 @@
     },
     {
       "branchId": 28053,
-      "componentId": "keboola.ex-ftp",
-      "id": "714189746",
-      "path": "extractor/keboola.ex-ftp/714189746-test",
-      "rows": []
-    },
-    {
-      "branchId": 28053,
       "componentId": "keboola.ex-google-analytics-v4",
       "id": "727176778",
       "path": "extractor/keboola.ex-google-analytics-v4/727176778-test",
@@ -145,13 +138,6 @@
     },
     {
       "branchId": 589,
-      "componentId": "keboola.ex-ftp",
-      "id": "714189746",
-      "path": "extractor/keboola.ex-ftp/714189746-test",
-      "rows": []
-    },
-    {
-      "branchId": 589,
       "componentId": "keboola.ex-google-adwords-reports-v201809",
       "id": "734333045",
       "path": "extractor/keboola.ex-google-adwords-reports-v201809/734333045-google-ads",
@@ -189,13 +175,6 @@
           "path": "rows/733931754-test"
         }
       ]
-    },
-    {
-      "branchId": 589,
-      "componentId": "keboola.ex-papertrail",
-      "id": "731067729",
-      "path": "extractor/keboola.ex-papertrail/731067729-test",
-      "rows": []
     },
     {
       "branchId": 589,
