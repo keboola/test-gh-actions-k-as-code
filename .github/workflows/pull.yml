@@ -1,7 +1,7 @@
 name: Pull
 on:
   schedule:
-    - cron:  '* * * * *'
+    - cron:  '*/5 * * * *'
 env:
   KBC_STORAGE_API_TOKEN: ${{ secrets.KBC_STORAGE_API_TOKEN }}
 jobs:
