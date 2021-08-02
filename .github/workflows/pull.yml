@@ -1,7 +1,7 @@
 name: Pull
 on:
   schedule:
-    - cron:  '*/10 * * * *'
+    - cron:  '*/1 * * * *'
 env:
   KBC_STORAGE_API_TOKEN: ${{ secrets.KBC_STORAGE_API_TOKEN }}
 jobs:
@@ -19,17 +19,16 @@ jobs:
       - name: Pull from Keboola Connection
         id: kbc_pull_step
         run: |
-          kbc pull --force
+          kbc pull --force 2>&1 | tee "$RUNNER_TEMP/log.txt"
       # Automatic pull can be canceled by push, wait a while
       - name: Wait
         run: sleep 20
       - name: Commit and push
         run: |
-          currentDate=`date +%s`
+          currentDate=`date +%Y-%m-%d:%T`
+          pull_log=`cat "$RUNNER_TEMP/log.txt"`
           git config --global user.name 'Keboola CLI'
           git config --global user.email 'keboola-cli@users.noreply.github.com'
           git add -A
-          git commit -am "Automatic pull $currentDate\n\n$pull_stdout" || true
+          git commit -am "Automatic pull ${currentDate}\n\n${pull_log}" || true
           git push
-        env:
-          pull_stdout: ${{join(steps.kbc_pull_step.outputs.*, '\n')}}
