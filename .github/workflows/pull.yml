@@ -1,4 +1,4 @@
-name: Pull
+name: Automatic pull
 on:
   schedule:
     - cron:  '*/5 * * * *'
