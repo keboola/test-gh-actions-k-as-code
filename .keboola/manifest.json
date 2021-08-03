@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "project": {
+    "id": 8637,
+    "apiHost": "connection.keboola.com"
+  },
+  "sortBy": "id",
+  "naming": {
+    "branch": "{branch_id}-{branch_name}",
+    "config": "{component_type}/{component_id}/{config_id}-{config_name}",
+    "configRow": "rows/{config_row_id}-{config_row_name}"
+  },
+  "allowedBranches": [
+    "__main__"
+  ],
+  "branches": [
+    {
+      "id": 26240,
+      "path": "main"
+    }
+  ],
+  "configurations": []
+}
