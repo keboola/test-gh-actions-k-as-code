@@ -19,5 +19,13 @@
       "path": "main"
     }
   ],
-  "configurations": []
+  "configurations": [
+    {
+      "branchId": 26240,
+      "componentId": "keboola.ex-db-mysql",
+      "id": "736936571",
+      "path": "extractor/keboola.ex-db-mysql/736936571-with-rows",
+      "rows": []
+    }
+  ]
 }
