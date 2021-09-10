@@ -22,13 +22,5 @@
       "path": "main"
     }
   ],
-  "configurations": [
-    {
-      "branchId": 26240,
-      "componentId": "ex-generic-v2",
-      "id": "751207917",
-      "path": "extractor/ex-generic-v2/751207917-empty",
-      "rows": []
-    }
-  ]
+  "configurations": []
 }
