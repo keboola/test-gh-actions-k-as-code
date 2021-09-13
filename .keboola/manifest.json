@@ -25,10 +25,15 @@
   "configurations": [
     {
       "branchId": 26240,
-      "componentId": "ex-generic-v2",
-      "id": "752469568",
-      "path": "extractor/ex-generic-v2/752469568-empty",
-      "rows": []
+      "componentId": "keboola.ex-db-mysql",
+      "id": "752474096",
+      "path": "extractor/keboola.ex-db-mysql/752474096-with-rows",
+      "rows": [
+        {
+          "id": "752474097",
+          "path": "rows/752474097-users"
+        }
+      ]
     }
   ]
 }
