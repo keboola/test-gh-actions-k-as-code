@@ -22,13 +22,5 @@
       "path": "main"
     }
   ],
-  "configurations": [
-    {
-      "branchId": 26240,
-      "componentId": "keboola.ex-azure-cost-management",
-      "id": "753358780",
-      "path": "extractor/keboola.ex-azure-cost-management/753358780-invalid",
-      "rows": []
-    }
-  ]
+  "configurations": []
 }
