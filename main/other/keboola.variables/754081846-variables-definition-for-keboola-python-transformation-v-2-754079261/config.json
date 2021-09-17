@@ -1,0 +1,8 @@
+{
+  "variables": [
+    {
+      "name": "var1",
+      "type": "string"
+    }
+  ]
+}
