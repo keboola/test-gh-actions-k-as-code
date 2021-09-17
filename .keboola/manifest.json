@@ -22,5 +22,26 @@
       "path": "main"
     }
   ],
-  "configurations": []
+  "configurations": [
+    {
+      "branchId": 26240,
+      "componentId": "keboola.ex-db-mysql",
+      "id": "754030899",
+      "path": "extractor/keboola.ex-db-mysql/754030899-with-rows",
+      "rows": [
+        {
+          "id": "754030901",
+          "path": "rows/754030901-users"
+        },
+        {
+          "id": "754030902",
+          "path": "rows/754030902-test-view"
+        },
+        {
+          "id": "754030903",
+          "path": "rows/754030903-disabled"
+        }
+      ]
+    }
+  ]
 }
