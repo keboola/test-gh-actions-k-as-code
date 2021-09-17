@@ -1,0 +1,12 @@
+{
+  "variables": [
+    {
+      "name": "var2-1",
+      "type": "string"
+    },
+    {
+      "name": "var2-2",
+      "type": "string"
+    }
+  ]
+}
