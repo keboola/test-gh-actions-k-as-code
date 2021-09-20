@@ -1,0 +1,3 @@
+{
+  "code_content": "create table mytable (amount number);\n\ninsert into mytable values(1);"
+}
