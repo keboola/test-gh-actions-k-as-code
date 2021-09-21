@@ -1,0 +1,8 @@
+{
+  "parameters": {
+    "db": {
+      "host": "mysql.example.com",
+      "#pass": "KBC::ProjectSecure::eJwBNAHL/mE6Mjp7aTowO3M6OTM6It71AgBMN8qupFSkk4vmpajJgeTSlYK7JN1Z0hdcMOuK7AyQBTIbJl9WR9PctVG5fe1xdvlp70plZuDgKhQgRlygEAuPMMk5/Z7nlmuifbbEFWH/DqA9T9zhHOxovSI7aToxO3M6MTg0OiIBAgMAeGVez2/nHl36SUiQv1vPJofmrO9Ycm3Z8Zb1zMOFZ23AAZMP49V/UDvHC+rhK+H+lPIAAAB+MHwGCSqGSIb3DQEHBqBvMG0CAQAwaAYJKoZIhvcNAQcBMB4GCWCGSAFlAwQBLjARBAwUZZWlfb1lM2/qoJMCARCAOwCz78Vo7Ivd0mimzOGmvW1gJ//+k92STPgHJlFpuWaVtamSR2Ynegh9YWdgvUAUFf7tiisl+uEAhivYIjt9GziF0A=="
+    }
+  }
+}
