@@ -1,12 +1,12 @@
 {
-  "variables": [
+  "values": [
     {
       "name": "abc",
-      "type": "string"
+      "value": ""
     },
     {
       "name": "x",
-      "type": "string"
+      "value": ""
     }
   ]
 }
